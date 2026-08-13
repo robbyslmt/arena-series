@@ -1,3 +1,5 @@
+import { SITES } from "../data/sites";
+
 export default function Footer() {
   return (
     <footer className="border-t border-line">
@@ -44,7 +46,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 flex flex-col gap-2 border-t border-line pt-6 font-mono text-[11px] uppercase tracking-widest text-dim sm:flex-row sm:items-center sm:justify-between">
-          <p>The Collection · Series 01 · 13 destinations</p>
+          <p>The Collection · Series 01 · {SITES.length} destinations</p>
           <p>Concepts derived, never themed · One interactive per site</p>
         </div>
       </div>

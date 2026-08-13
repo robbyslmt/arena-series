@@ -1,4 +1,5 @@
 import ThemeToggle from "./ThemeToggle";
+import { SITES } from "../data/sites";
 
 const HERO_VIDEO = {
   src: "https://videos.pexels.com/video-files/15204928/15204928-hd_1280_720_24fps.mp4",
@@ -38,7 +39,7 @@ export default function Hero() {
           </div>
           <div className="flex items-center gap-4">
             <p className="hidden font-mono text-[11px] uppercase tracking-[0.25em] text-white/70 sm:block">
-              Est. 2026 · 13 destinations
+              Est. 2026 · {SITES.length} destinations
             </p>
             <ThemeToggle />
           </div>

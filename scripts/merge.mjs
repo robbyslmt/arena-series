@@ -30,7 +30,7 @@ const SLUGS = [
 ];
 
 const CHIP =
-  '<!-- series index chip --><a href="../../index.html" title="Back to THE COLLECTION" style="position:fixed;right:14px;bottom:14px;z-index:99999;font:600 10px/1 ui-monospace,monospace;letter-spacing:.12em;color:#0b0b0d;background:#ffb224;border-radius:999px;padding:7px 11px;text-decoration:none;opacity:.88;box-shadow:0 2px 12px rgba(0,0,0,.45)">\u2302 SERIES INDEX \u00b7 13 SITES<\/a>';
+  '<!-- series index chip --><a href="../../index.html" title="Back to THE COLLECTION" style="position:fixed;right:14px;bottom:14px;z-index:99999;font:600 10px/1 ui-monospace,monospace;letter-spacing:.12em;color:#0b0b0d;background:#ffb224;border-radius:999px;padding:7px 11px;text-decoration:none;opacity:.88;box-shadow:0 2px 12px rgba(0,0,0,.45)">\u2302 SERIES INDEX \u00b7 ' + SLUGS.length + ' SITES<\/a>';
 
 rmSync(OUT, { recursive: true, force: true });
 mkdirSync(OUT, { recursive: true });

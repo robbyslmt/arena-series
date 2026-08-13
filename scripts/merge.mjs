@@ -32,8 +32,13 @@ const SLUGS = [
 const CHIP =
   '<!-- series index chip --><a href="../../index.html" title="Back to THE COLLECTION" style="position:fixed;right:14px;bottom:14px;z-index:99999;font:600 10px/1 ui-monospace,monospace;letter-spacing:.12em;color:#0b0b0d;background:#ffb224;border-radius:999px;padding:7px 11px;text-decoration:none;opacity:.88;box-shadow:0 2px 12px rgba(0,0,0,.45)">\u2302 SERIES INDEX \u00b7 ' + SLUGS.length + ' SITES<\/a>';
 
-rmSync(OUT, { recursive: true, force: true });
+// Non-destructive: never wipe the whole OUT tree (a mid-wipe EBUSY on Windows
+// can gut live-output and leave no index.html). Only remove the two subdirs we
+// always fully repopulate, then copy the dashboard index.html unconditionally.
+rmSync(join(OUT, "sites"), { recursive: true, force: true });
+rmSync(join(OUT, "thumbs"), { recursive: true, force: true });
 mkdirSync(OUT, { recursive: true });
+mkdirSync(join(OUT, "sites"), { recursive: true });
 
 const missing = [];
 

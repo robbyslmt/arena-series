@@ -1,0 +1,11 @@
+import { chromium } from "playwright";
+const browser = await chromium.launch();
+const page = await browser.newPage({ viewport: { width: 1280, height: 820 } });
+page.on("response", (r) => { if (r.status() >= 400) console.log("HTTP", r.status(), r.url()); });
+page.on("requestfailed", (r) => console.log("FAILED", r.url(), r.failure()?.errorText));
+await page.goto("http://localhost:8399/sites/premium-jeju-landing-page/", { waitUntil: "domcontentloaded" });
+await page.waitForTimeout(4000);
+await page.evaluate(async () => { window.scrollTo(0, document.body.scrollHeight); await new Promise((r) => setTimeout(r, 800)); });
+await page.waitForTimeout(800);
+console.log("jeju probe done");
+await browser.close();

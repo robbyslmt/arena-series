@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Sono", system-ui, sans-serif;
+  --font-mono: "Fragment Mono", ui-monospace, monospace;
+  /* runtime tokens, themed via [data-theme] */
+  --color-ink: var(--ink);
+  --color-panel: var(--panel);
+  --color-paper: var(--paper);
+  --color-dim: var(--dim);
+  --color-signal: var(--signal);
+  --color-line: var(--line);
+  --color-ok: var(--ok);
+}
+
+/* ---------- themes ---------- */
+:root,
+[data-theme="dark"] {
+  --ink: #0b0b0d;
+  --panel: #121215;
+  --paper: #ece8de;
+  --dim: #8f8b80;
+  --signal: #ffb224;
+  --line: #26262b;
+  --ok: #45eccf;
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  --ink: #f2efe8;
+  --panel: #ffffff;
+  --paper: #1c1b18;
+  --dim: #6f6a5e;
+  --signal: #b45309;
+  --line: #e0dacb;
+  --ok: #0e8a72;
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-display);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+::selection {
+  background: var(--signal);
+  color: var(--ink);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--ink);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 4px;
+}
+
+/* ---------- cards ---------- */
+.series-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.3s, box-shadow 0.3s;
+}
+.series-card:hover,
+.series-card:focus-visible {
+  transform: translateY(-4px);
+  border-color: var(--signal);
+  box-shadow: 0 18px 40px -18px color-mix(in srgb, var(--signal) 45%, transparent);
+}
+.series-card .card-media {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+}
+.series-card .card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), filter 0.4s;
+  filter: saturate(0.88);
+}
+.series-card:hover .card-media img,
+.series-card:focus-visible .card-media img {
+  transform: scale(1.05);
+  filter: saturate(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

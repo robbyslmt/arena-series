@@ -1,0 +1,5 @@
+node_modules/
+dist/
+scripts/palette-report.json
+scripts/thumbs/
+.DS_Store

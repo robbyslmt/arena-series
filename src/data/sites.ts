@@ -282,6 +282,20 @@ export const SITES: Site[] = [
     builder: "hermes",
     status: "verified",
   },
+  {
+    no: "20",
+    slug: "kyoto-destination-landing-page",
+    place: "Kyoto",
+    glyph: "十五",
+    region: "Kyoto, JP",
+    concept: "Jūgo · the hidden fifteenth stone",
+    line: "Ryōan-ji’s fifteen stones read the whole basin. From any seat one stays hidden — that remainder is the visit.",
+    palette: ["#0b0e14", "#9a7b4a", "#e8e0d0"],
+    interactive: "fifteen stones · veranda view",
+    typeface: "Bodoni Moda + Shippori Mincho + Sora",
+    builder: "arena",
+    status: "verified",
+  },
 ];
 
 export const GLYPH_MARQUEE = [

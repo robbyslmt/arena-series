@@ -1,7 +1,7 @@
 // Merge: dashboard dist -> live-output/index.html; each site dist -> live-output/sites/<slug>/index.html
-// with a small "SERIES INDEX" back-chip injected before </body>.
 // Usage: node scripts/merge.mjs
-import { readFileSync, writeFileSync, mkdirSync, rmSync, copyFileSync, existsSync, cpSync, readdirSync, statSync } from "node:fs";
+// Note: the old "SERIES INDEX" floating chip was removed 2026-08-14 per user request — no chip is injected anymore.
+import { readFileSync, writeFileSync, mkdirSync, rmSync, copyFileSync, existsSync, cpSync } from "node:fs";
 import { join } from "node:path";
 
 const ARENA = "C:/Users/robby/Downloads/Arena AI";
@@ -27,10 +27,8 @@ const SLUGS = [
   "malacca-heritage-landing-page",
   "tana-toraja-landing-page",
   "tanah-coffee-landing-page",
+  "kyoto-destination-landing-page",
 ];
-
-const CHIP =
-  '<!-- series index chip --><a href="../../index.html" title="Back to THE COLLECTION" style="position:fixed;right:14px;bottom:14px;z-index:99999;font:600 10px/1 ui-monospace,monospace;letter-spacing:.12em;color:#0b0b0d;background:#ffb224;border-radius:999px;padding:7px 11px;text-decoration:none;opacity:.88;box-shadow:0 2px 12px rgba(0,0,0,.45)">\u2302 SERIES INDEX \u00b7 ' + SLUGS.length + ' SITES<\/a>';
 
 // Non-destructive: never wipe the whole OUT tree (a mid-wipe EBUSY on Windows
 // can gut live-output and leave no index.html). Only remove the two subdirs we
@@ -57,17 +55,17 @@ for (const slug of SLUGS) {
   // 2) rewrite absolute root asset refs (/images/x.jpg, /videos/y.mp4, /fonts/z.woff2)
   //    -> relative (./images/x.jpg) so subpath hosting works. Only bare-root refs,
   //    never scheme-relative or already-relative ones.
+  //    Also strip any legacy "SERIES INDEX" chip left from older builds.
   const indexPath = join(destDir, "index.html");
   let html = readFileSync(indexPath, "utf8");
-  if (!html.includes("SERIES INDEX")) {
-    html = html.replace(/<\/body>/i, CHIP + "</body>");
-  }
+  html = html.replace(/<!-- series index chip -->.*?<\/a>/gs, "");
+  html = html.replace(/<a[^>]*>.*?SERIES INDEX.*?<\/a>/gs, "");
   html = html
-    .replace(/(["'(])[ \t]*\/images\//g, '$1images/')
-    .replace(/(["'(])[ \t]*\/videos\//g, '$1videos/')
-    .replace(/(["'(])[ \t]*\/assets\//g, '$1assets/')
-    .replace(/(["'(])[ \t]*\/fonts\//g, '$1fonts/')
-    .replace(/(["'(])[ \t]*\/audio\//g, '$1audio/');
+    .replace(/(["'(])[ \t]*\/images\//g, "$1images/")
+    .replace(/(["'(])[ \t]*\/videos\//g, "$1videos/")
+    .replace(/(["'(])[ \t]*\/assets\//g, "$1assets/")
+    .replace(/(["'(])[ \t]*\/fonts\//g, "$1fonts/")
+    .replace(/(["'(])[ \t]*\/audio\//g, "$1audio/");
   writeFileSync(indexPath, html);
   console.log("merged:", slug);
 }

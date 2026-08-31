@@ -1,6 +1,17 @@
 import ThemeToggle from "./ThemeToggle";
 import { SITES } from "../data/sites";
 
+// Spell the count in words for the statement headline (13 → THIRTEEN, 20 → TWENTY),
+// fall back to digits past 20 so the hero never goes stale again.
+const PLACE_WORDS: Record<number, string> = {
+  1: "ONE", 2: "TWO", 3: "THREE", 4: "FOUR", 5: "FIVE", 6: "SIX",
+  7: "SEVEN", 8: "EIGHT", 9: "NINE", 10: "TEN", 11: "ELEVEN",
+  12: "TWELVE", 13: "THIRTEEN", 14: "FOURTEEN", 15: "FIFTEEN",
+  16: "SIXTEEN", 17: "SEVENTEEN", 18: "EIGHTEEN", 19: "NINETEEN",
+  20: "TWENTY",
+};
+const PLACE_COUNT = PLACE_WORDS[SITES.length] ?? String(SITES.length);
+
 const HERO_VIDEO = {
   src: "https://videos.pexels.com/video-files/15204928/15204928-hd_1280_720_24fps.mp4",
   poster:
@@ -49,7 +60,7 @@ export default function Hero() {
         <div className="py-20 lg:py-28">
           <h1 className="text-[13vw] font-extrabold leading-[0.9] tracking-tight text-white sm:text-7xl lg:text-[88px]">
             <span className="block drop-shadow-[0_2px_18px_rgba(0,0,0,0.45)]">
-              THIRTEEN PLACES.
+              {PLACE_COUNT} PLACES.
             </span>
             <span className="block text-white/65">ZERO TEMPLATES.</span>
           </h1>

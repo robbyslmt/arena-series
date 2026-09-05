@@ -4,7 +4,7 @@
 import { readFileSync, writeFileSync, mkdirSync, rmSync, copyFileSync, existsSync, cpSync } from "node:fs";
 import { join } from "node:path";
 
-const ARENA = "C:/Users/robby/Downloads/Arena AI";
+const ARENA = "C:/Users/robby/Downloads/Arena AI Drive";
 const OUT = join(import.meta.dirname, "..", "live-output");
 
 const SLUGS = [
@@ -28,6 +28,7 @@ const SLUGS = [
   "tana-toraja-landing-page",
   "tanah-coffee-landing-page",
   "kyoto-destination-landing-page",
+  "sukhothai-destination-landing-page",
 ];
 
 // Non-destructive: never wipe the whole OUT tree (a mid-wipe EBUSY on Windows

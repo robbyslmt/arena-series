@@ -18,6 +18,14 @@ const SLUGS = [
   "premium-phuket-landing-page",
   "yogyakarta-destination-landing-page",
   "nyc-the-grid-landing-page",
+  "purnama-film-festival-landing-page",
+  "archival-contact-sheet-portfolio",
+  "benang-ikat-landing-page",
+  "malacca-heritage-landing-page",
+  "tana-toraja-landing-page",
+  "tanah-coffee-landing-page",
+  "kyoto-destination-landing-page",
+  "sukhothai-destination-landing-page",
 ];
 
 const browser = await chromium.launch();

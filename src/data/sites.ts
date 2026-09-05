@@ -296,6 +296,20 @@ export const SITES: Site[] = [
     builder: "arena",
     status: "verified",
   },
+  {
+    no: "21",
+    slug: "sukhothai-destination-landing-page",
+    place: "Sukhothai",
+    glyph: "สุโขทัย",
+    region: "Central Thailand",
+    concept: "The Dawn of Happiness",
+    line: "Two states of one glaze: draw the sun up and the old city wakes in the order it actually does.",
+    palette: ["#0b1a18", "#e9f0e9", "#c0475a"],
+    interactive: "dawn drag — draw the sun up",
+    typeface: "Bodoni Moda + Hanken Grotesk",
+    builder: "arena",
+    status: "verified",
+  },
 ];
 
 export const GLYPH_MARQUEE = [
@@ -317,4 +331,5 @@ export const GLYPH_MARQUEE = [
   "MELAKA",
   "TANA",
   "TANAH",
+  "สุโขทัย",
 ];

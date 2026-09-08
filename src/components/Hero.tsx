@@ -8,7 +8,7 @@ const PLACE_WORDS: Record<number, string> = {
   7: "SEVEN", 8: "EIGHT", 9: "NINE", 10: "TEN", 11: "ELEVEN",
   12: "TWELVE", 13: "THIRTEEN", 14: "FOURTEEN", 15: "FIFTEEN",
   16: "SIXTEEN", 17: "SEVENTEEN", 18: "EIGHTEEN", 19: "NINETEEN",
-  20: "TWENTY",
+  20: "TWENTY", 21: "TWENTY-ONE",
 };
 const PLACE_COUNT = PLACE_WORDS[SITES.length] ?? String(SITES.length);
 

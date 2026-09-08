@@ -1,6 +1,6 @@
-# Arena Series Dashboard — THE COLLECTION (20 sites)
+# Arena Series Dashboard — THE COLLECTION (21 sites)
 
-Hub dashboard for the 20-site cinematic destination collection. Live: https://arena-series-dashboard.vercel.app
+Hub dashboard for the 21-site cinematic destination collection. Live: https://arena-series-dashboard.vercel.app
 
 ## Branches (IMPORTANT — do not change)
 

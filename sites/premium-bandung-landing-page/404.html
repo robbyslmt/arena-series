@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 · No reading at this altitude — CEKUNGAN</title>
+  <meta name="description" content="The altimeter found no contour line here. Return to the ascent." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2317140E'/%3E%3Cpath d='M16 5 L27 26 L5 26 Z' fill='none' stroke='%23D9A62E' stroke-width='2'/%3E%3Cpath d='M16 13 L21 26 L11 26 Z' fill='%237ECFC0'/%3E%3C/svg%3E" />
+  <style>
+    :root { --ink: #17140E; --ink-soft: #242016; --paper: #EFE9DA; --sulfur: #D9A62E; --teal: #7ECFC0; }
+    * { box-sizing: border-box; margin: 0; }
+    html { background: var(--ink); }
+    body {
+      min-height: 100svh; background: var(--ink); color: var(--paper);
+      font-family: "Archivo", "Helvetica Neue", Arial, sans-serif;
+      display: flex; flex-direction: column; overflow-x: clip;
+    }
+    .top { display: flex; justify-content: space-between; padding: 2rem 2.5rem; font-family: "Space Mono", monospace; font-size: 11px; letter-spacing: .3em; color: rgba(239,233,218,.55); }
+    .top b { color: var(--paper); font-weight: 700; letter-spacing: .35em; }
+    main { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 3rem 2.5rem 4rem; }
+    .alt { font-family: "Space Mono", monospace; font-size: 11px; letter-spacing: .45em; color: var(--sulfur); }
+    .big { font-size: clamp(4rem, 15vw, 10rem); line-height: .9; font-weight: 300; margin: 1.2rem 0; }
+    .big em { font-style: normal; color: var(--sulfur); }
+    .lead { max-width: 46ch; font-size: 15px; line-height: 1.7; color: rgba(239,233,218,.72); }
+    .cta { margin-top: 2.6rem; display: flex; flex-wrap: wrap; gap: 1rem; }
+    .btn { font-family: "Space Mono", monospace; font-size: 11px; letter-spacing: .22em; padding: .85em 1.5em; border: 1px solid rgba(239,233,218,.3); color: var(--paper); text-decoration: none; transition: border-color .3s, color .3s; }
+    .btn:hover { border-color: var(--sulfur); color: var(--sulfur); }
+    .quiet { font-family: "Space Mono", monospace; font-size: 11px; letter-spacing: .22em; padding: .85em .4em; color: rgba(239,233,218,.45); text-decoration: none; border-bottom: 1px solid rgba(239,233,218,.2); align-self: center; }
+    .quiet:hover { color: var(--teal); border-color: var(--teal); }
+  </style>
+</head>
+<body>
+  <div class="top"><span><b>CEKUNGAN</b> · FIELD JOURNAL N°07</span><span>06°54′S — 107°36′E</span></div>
+  <main>
+    <p class="alt">ALTIMETER · NO CONTOUR LINE</p>
+    <h1 class="big">4<em>0</em>4</h1>
+    <p class="lead">There is no stratum at this altitude. The journal runs from the basin floor at 715&nbsp;m to the crater rim at 2,434&nbsp;m — this path is outside the survey.</p>
+    <div class="cta">
+      <a class="btn" href="./">↑ KEMBALI · back to the ascent</a>
+      <a class="quiet" href="./privacy.html">Privacy · notes</a>
+    </div>
+  </main>
+</body>
+</html>

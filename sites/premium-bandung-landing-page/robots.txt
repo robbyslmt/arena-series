@@ -1,0 +1,6 @@
+# CEKUNGAN — a vertical field journal of Bandung, Indonesia.
+# Independent, non-commercial study page. No tracking, no cookies.
+User-agent: *
+Allow: /
+
+Sitemap: https://robbyslmt.github.io/cekungan/sitemap.xml

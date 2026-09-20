@@ -1,0 +1,3 @@
+# Netlify: point every unknown route at the themed 404 so it fires with a real
+# 404 status instead of a misleading 200 index fallback.
+/*  /404.html  404

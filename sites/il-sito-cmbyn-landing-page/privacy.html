@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en" data-theme="scavo">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Privacy · note legali · Il Sito</title>
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#14110d" />
+  <meta name="color-scheme" content="dark" />
+  <meta
+    name="description"
+    content="Privacy notice and legal notes for IL SITO: a non-commercial, one-page static survey. No cookies, no tracking, no forms. The only thing this page stores is your theme choice, kept in your own browser."
+  />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2314110d'/%3E%3Cg fill='none' stroke='%23c2703f' stroke-width='1.6'%3E%3Cpath d='M6 7h20M6 12h20M6 17h20M6 22h20M6 27h20'/%3E%3C/g%3E%3Ccircle cx='11' cy='12' r='2.4' fill='%23c2703f'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --ground: #14110d;
+      --ground-2: #1b1712;
+      --ink: #efe6d5;
+      --ink-2: #c4b8a3;
+      --ink-3: #8b8070;
+      --rule: rgba(239, 230, 213, 0.14);
+      --rule-2: rgba(239, 230, 213, 0.3);
+      --grid-line: rgba(239, 230, 213, 0.045);
+      --soil: #c2703f;
+      --cta: #8a4526;
+      --ink-on-soil: #f7efe0;
+      --font-display: 'Instrument Serif', 'Iowan Old Style', Georgia, serif;
+      --font-ui: 'Karla', 'Helvetica Neue', sans-serif;
+      --font-body: 'Newsreader', Georgia, serif;
+      --s2: 0.5rem; --s3: 0.75rem; --s4: 1rem; --s5: 1.5rem; --s6: 2rem; --s7: 3rem;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background-color: var(--ground);
+      background-image:
+        radial-gradient(120% 80% at 50% 0%, rgba(20, 17, 13, 0) 40%, rgba(20, 17, 13, 0.55) 100%),
+        repeating-linear-gradient(0deg, transparent, transparent 31px, var(--grid-line) 31px, var(--grid-line) 32px);
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-size: 1.02rem;
+      line-height: 1.72;
+    }
+    .top {
+      position: sticky; top: 0; z-index: 5;
+      display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;
+      padding: 1.1rem clamp(1.25rem, 4vw, 3rem);
+      font-family: var(--font-ui); font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-3);
+      background: rgba(20, 17, 13, 0.82); backdrop-filter: blur(6px);
+      border-bottom: 1px solid var(--rule);
+    }
+    .top .dot { color: var(--soil); }
+    .top a {
+      color: var(--ink-2); text-decoration: none; border-bottom: 1px solid var(--rule-2);
+      padding-bottom: 2px;
+    }
+    .top a:hover { color: var(--soil); border-color: var(--soil); }
+    .wrap {
+      max-width: 52ch; margin: 0 auto;
+      padding: clamp(3rem, 8vw, 5.5rem) 1.5rem 5rem;
+    }
+    .kicker {
+      font-family: var(--font-ui); font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 0.2em; text-transform: uppercase; color: var(--soil);
+      display: flex; align-items: center; gap: 0.7em; margin-bottom: var(--s4);
+    }
+    .kicker::before { content: ''; width: 2rem; height: 1px; background: var(--soil); }
+    h1 {
+      font-family: var(--font-display); font-weight: 400;
+      font-size: clamp(2.6rem, 7vw, 4rem); line-height: 1.05; margin: 0 0 var(--s4);
+    }
+    .lede { font-size: 1.2rem; color: var(--ink-2); margin: 0 0 var(--s6); }
+    h2 {
+      font-family: var(--font-ui); font-size: 0.82rem; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink);
+      margin: var(--s6) 0 var(--s3);
+      display: flex; gap: var(--s3); align-items: baseline;
+    }
+    h2 .n { color: var(--soil); font-variant-numeric: tabular-nums; }
+    p { margin: 0 0 var(--s3); color: var(--ink-2); }
+    strong { color: var(--ink); font-weight: 600; }
+    .fact {
+      background: var(--ground-2); border: 1px solid var(--rule);
+      border-left: 3px solid var(--soil);
+      padding: var(--s4) var(--s5); margin: var(--s5) 0;
+    }
+    .fact p { margin: 0; }
+    ul { margin: 0 0 var(--s4); padding-left: 1.2rem; color: var(--ink-2); }
+    li { margin-bottom: 0.5rem; }
+    li::marker { color: var(--soil); }
+    a:not(.top a) { color: var(--soil); }
+    .colophon {
+      border-top: 1px solid var(--rule);
+      padding: var(--s5) 1.5rem 3rem;
+      max-width: 52ch; margin: 0 auto;
+      font-family: var(--font-ui); font-size: 0.7rem; letter-spacing: 0.08em; color: var(--ink-3);
+    }
+    .back { margin-top: var(--s6); }
+    .back a {
+      display: inline-flex; align-items: center; gap: 0.6em;
+      font-family: var(--font-ui); font-size: 0.78rem; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none;
+      background: var(--cta); color: var(--ink-on-soil);
+      padding: 0.85em 1.4em; transition: filter 0.3s ease;
+    }
+    .back a:hover { filter: brightness(1.12); }
+    :focus-visible { outline: 2px solid var(--soil); outline-offset: 3px; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <div class="top" role="banner">
+    <span>IL SITO<span class="dot">.</span></span>
+    <a href="./">Torna al rilievo · back</a>
+  </div>
+
+  <main class="wrap">
+    <div class="kicker">Nota di trasparenza · the disclosure</div>
+    <h1>Privacy &amp; note legali</h1>
+    <p class="lede">
+      The short version up front: this page collects nothing. No cookies, no tracking,
+      no analytics, no forms. The only thing it ever stores is your theme choice,
+      kept in your own browser.
+    </p>
+
+    <h2><span class="n">01</span> What this site is</h2>
+    <p>
+      <strong>Il Sito</strong> is an independent, non-commercial study page: a stratigraphic
+      survey of the Lombardy filming places of <em>Call Me by Your Name</em> (2017).
+      It is a single static document. It is not affiliated with, endorsed by, or
+      connected to the film, its makers, or the places it names.
+    </p>
+
+    <h2><span class="n">02</span> No cookies, no tracking, no consent banner</h2>
+    <p>
+      This site sets <strong>no cookies</strong> and loads <strong>no analytics or tracking
+      script</strong>. There is nothing to measure, nothing to sell, and no third party
+      reporting back. That is why there is no cookie banner: one would have nothing to
+      consent to.
+    </p>
+
+    <h2><span class="n">03</span> The one thing stored: your theme</h2>
+    <div class="fact">
+      <p>
+        Choosing the dark (<em>scavo</em>) or light (<em>rilievo</em>) theme saves a single
+        value, <code>ilsito.theme</code>, to your browser's <strong>local storage</strong>.
+        It never leaves your device, it identifies nothing, and clearing your site data
+        removes it. In private-browsing mode it may not persist at all.
+      </p>
+    </div>
+
+    <h2><span class="n">04</span> External requests</h2>
+    <ul>
+      <li>
+        <strong>Typography.</strong> Three typefaces load from Google Fonts
+        (<span style="font-family: var(--font-ui); font-size: 0.85em">fonts.googleapis.com</span>).
+        Visiting the page therefore sends your IP address to Google, as with any site that
+        serves web fonts this way. No other Google service is involved.
+      </li>
+      <li>
+        <strong>Photography and film.</strong> Every plate is licensed stock from
+        <a href="https://www.pexels.com" target="_blank" rel="noopener noreferrer">Pexels</a>,
+        served locally from this page, and credited on its plate and in the footer with a
+        link to the author's Pexels profile. Those links open only if you click them.
+      </li>
+      <li>
+        <strong>Nothing else.</strong> All media is bundled into the page itself; there are
+        no ad networks, no CDNs beyond the fonts above, and no server-side requests from
+        the viewer's browser.
+      </li>
+    </ul>
+
+    <h2><span class="n">05</span> Intellectual property</h2>
+    <ul>
+      <li>
+        <em>Call Me by Your Name</em> (2017) and its title, images, and sounds are the
+        property of their respective owners. This page is a fan appreciation that names
+        and describes places; it reproduces no film frames, audio, or substantial excerpts.
+      </li>
+      <li>
+        All photography and clips are Pexels-licensed stock, free to use with attribution,
+        which this page gives per plate. The villa at Moscazzano is private; it is never
+        shown, only described. Where a plate is not the exact location, it is marked
+        <strong>Rappresentativo</strong> and says so.
+      </li>
+      <li>
+        The page's own design, survey copy, and code are original to this build.
+      </li>
+    </ul>
+
+    <h2><span class="n">06</span> No data collection, therefore no retention</h2>
+    <p>
+      There are no forms, no accounts, no comments, and no contact field on this page, so
+      there is no personal data collected, stored, or retained. If you believe something on
+      this page is wrong, or a credit is missing, the cleanest route is to raise it where
+      the page is shared.
+    </p>
+
+    <h2><span class="n">07</span> Changes</h2>
+    <p>
+      This notice describes a one-page static site and will only change if that stops being
+      true. It is dated <strong>20 September 2026</strong>.
+    </p>
+
+    <div class="back">
+      <a href="./">&larr; Torna al rilievo · back to the survey</a>
+    </div>
+  </main>
+
+  <div class="colophon">
+    IL SITO · Archivio dei luoghi, rilievo n. 07 · an independent study page
+  </div>
+</body>
+</html>

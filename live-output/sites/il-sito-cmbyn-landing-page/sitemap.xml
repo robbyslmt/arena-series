@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  IL SITO · sitemap.xml
+  One-page static site: a single crawlable document, with its in-page
+  sections listed as page-fragment locators so deep links stay honest.
+  Hosted on GitHub Pages: https://robbyslmt.github.io/il-sito/
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://robbyslmt.github.io/il-sito/</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <!-- in-page survey sections (fragments of the single document) -->
+  <url>
+    <loc>https://robbyslmt.github.io/il-sito/#sondaggio</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://robbyslmt.github.io/il-sito/#tavola</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://robbyslmt.github.io/il-sito/#taccuino</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+</urlset>

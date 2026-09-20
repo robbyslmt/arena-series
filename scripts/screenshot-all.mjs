@@ -25,6 +25,8 @@ const SLUGS = [
   "nyc-the-grid-landing-page",
   "kyoto-destination-landing-page",
   "sukhothai-destination-landing-page",
+  "il-sito-cmbyn-landing-page",
+  "premium-bandung-landing-page",
   "purnama-film-festival-landing-page",
   "archival-contact-sheet-portfolio",
   "benang-ikat-landing-page",

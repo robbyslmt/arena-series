@@ -310,6 +310,34 @@ export const SITES: Site[] = [
     builder: "arena",
     status: "verified",
   },
+  {
+    no: "22",
+    slug: "il-sito-cmbyn-landing-page",
+    place: "Lombardy · Call Me by Your Name",
+    glyph: "IL SITO",
+    region: "Lombardy, IT",
+    concept: "Strata of the Survey",
+    line: "Ten strata across Crema, Bergamo and the province of Cremona where the 2017 film actually shot. A field ledger, not a fan page.",
+    palette: ["#14110d", "#c2703f", "#efe6d5"],
+    interactive: "strata stack + film clips",
+    typeface: "Instrument Serif + Newsreader + Karla",
+    builder: "hermes",
+    status: "verified",
+  },
+  {
+    no: "23",
+    slug: "premium-bandung-landing-page",
+    place: "Bandung",
+    glyph: "CEKUNGAN",
+    region: "West Java, ID",
+    concept: "A Vertical Field Journal",
+    line: "Bandung, sea of fire at 768 m: scrub the altitude rail and the city descends from the upland to the basin floor. Topo-line, art-deco Braga, field notes.",
+    palette: ["#17140E", "#D9A62E", "#7ECFC0"],
+    interactive: "altitude scrub + topo map",
+    typeface: "Fraunces + Archivo + Space Mono",
+    builder: "hermes",
+    status: "verified",
+  },
 ];
 
 export const GLYPH_MARQUEE = [
@@ -332,4 +360,6 @@ export const GLYPH_MARQUEE = [
   "TANA",
   "TANAH",
   "สุโขทัย",
+  "IL SITO",
+  "CEKUNGAN"
 ];

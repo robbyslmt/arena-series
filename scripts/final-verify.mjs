@@ -26,6 +26,9 @@ const SLUGS = [
   "tanah-coffee-landing-page",
   "kyoto-destination-landing-page",
   "sukhothai-destination-landing-page",
+
+  "il-sito-cmbyn-landing-page",
+  "premium-bandung-landing-page",
 ];
 
 const browser = await chromium.launch();

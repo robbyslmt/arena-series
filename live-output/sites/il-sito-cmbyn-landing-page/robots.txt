@@ -1,0 +1,6 @@
+# IL SITO · an independent appreciation of the Lombardy filming places of Call Me by Your Name (2017).
+# One-page static site: a themed 404 and a privacy/legal notice. No tracking, no cookies.
+User-agent: *
+Allow: /
+
+Sitemap: https://robbyslmt.github.io/il-sito/sitemap.xml

@@ -29,6 +29,9 @@ const SLUGS = [
   "tanah-coffee-landing-page",
   "kyoto-destination-landing-page",
   "sukhothai-destination-landing-page",
+
+  "il-sito-cmbyn-landing-page",
+  "premium-bandung-landing-page",
 ];
 
 // Non-destructive: never wipe the whole OUT tree (a mid-wipe EBUSY on Windows

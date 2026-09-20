@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en" data-theme="scavo">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>404 · Nessun livello a questa profondità · Il Sito</title>
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#14110d" />
+  <meta name="color-scheme" content="dark" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2314110d'/%3E%3Cg fill='none' stroke='%23c2703f' stroke-width='1.6'%3E%3Cpath d='M6 7h20M6 12h20M6 17h20M6 22h20M6 27h20'/%3E%3C/g%3E%3Ccircle cx='11' cy='12' r='2.4' fill='%23c2703f'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --ground: #14110d;
+      --ink: #efe6d5;
+      --ink-2: #c4b8a3;
+      --ink-3: #8b8070;
+      --rule: rgba(239, 230, 213, 0.14);
+      --rule-2: rgba(239, 230, 213, 0.3);
+      --grid-line: rgba(239, 230, 213, 0.045);
+      --soil: #c2703f;
+      --cta: #8a4526;
+      --ink-on-soil: #f7efe0;
+      --font-display: 'Instrument Serif', 'Iowan Old Style', Georgia, serif;
+      --font-ui: 'Karla', 'Helvetica Neue', sans-serif;
+      --font-body: 'Newsreader', Georgia, serif;
+      --s2: 0.5rem; --s3: 0.75rem; --s4: 1rem; --s5: 1.5rem; --s6: 2rem; --s7: 3rem;
+      --t-small: 0.78rem;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--ground);
+      color: var(--ink);
+      font-family: var(--font-body);
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      /* the survey grid: graph-paper hairlines, the page's own ground */
+      background-image:
+        radial-gradient(120% 90% at 50% 0%, rgba(20, 17, 13, 0) 40%, rgba(20, 17, 13, 0.6) 100%),
+        repeating-linear-gradient(0deg, transparent, transparent 31px, var(--grid-line) 31px, var(--grid-line) 32px);
+      background-color: var(--ground);
+    }
+    .top {
+      position: sticky; top: 0; z-index: 5;
+      display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;
+      padding: 1.1rem clamp(1.25rem, 4vw, 3rem);
+      font-family: var(--font-ui); font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-3);
+      background: rgba(20, 17, 13, 0.82); backdrop-filter: blur(6px);
+      border-bottom: 1px solid var(--rule);
+    }
+    .top .dot { color: var(--soil); }
+    .wrap {
+      flex: 1;
+      display: grid; place-content: center; text-align: center;
+      padding: clamp(3rem, 8vw, 6rem) 1.5rem;
+      max-width: 62ch; margin: 0 auto; width: 100%;
+    }
+    /* a borehole tick at the missing depth */
+    .depth {
+      display: inline-flex; flex-direction: column; align-items: center; gap: 0.4rem;
+      margin-bottom: var(--s6);
+    }
+    .depth .ticks { width: 1px; height: 44px; background: var(--rule-2); position: relative; }
+    .depth .ticks::after {
+      content: ''; position: absolute; left: -4px; top: 50%; width: 9px; height: 1px;
+      background: var(--soil);
+    }
+    .depth .m { font-family: var(--font-ui); font-size: var(--t-small); letter-spacing: 0.14em; color: var(--ink-3); }
+    .depth .m b { color: var(--soil); font-weight: 600; }
+    h1 {
+      font-family: var(--font-display); font-weight: 400;
+      font-size: clamp(5rem, 16vw, 9rem); line-height: 0.9; margin: 0;
+      letter-spacing: -0.01em;
+    }
+    .sub {
+      font-family: var(--font-ui); font-size: 0.95rem; color: var(--ink-2);
+      margin: var(--s5) 0 0.6rem;
+    }
+    .sub i { font-family: var(--font-body); font-style: italic; color: var(--ink); }
+    .note {
+      font-family: var(--font-body); font-size: 1.05rem; line-height: 1.7;
+      color: var(--ink-2); max-width: 46ch; margin: 0 auto;
+    }
+    .cta { margin-top: var(--s6); display: flex; flex-direction: column; gap: var(--s3); align-items: center; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.6em;
+      font-family: var(--font-ui); font-size: var(--t-small); font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      background: var(--cta); color: var(--ink-on-soil); text-decoration: none;
+      padding: 0.85em 1.4em;
+      transition: filter 0.3s ease;
+    }
+    .btn:hover { filter: brightness(1.12); }
+    .quiet {
+      font-family: var(--font-ui); font-size: 0.78rem; letter-spacing: 0.06em;
+      color: var(--ink-3); text-decoration: underline; text-underline-offset: 3px;
+    }
+    .quiet:hover { color: var(--soil); }
+    .colophon {
+      padding: var(--s5) clamp(1.25rem, 4vw, 3rem);
+      border-top: 1px solid var(--rule);
+      font-family: var(--font-ui); font-size: 0.68rem; letter-spacing: 0.08em;
+      color: var(--ink-3); text-align: center;
+    }
+    :focus-visible { outline: 2px solid var(--soil); outline-offset: 3px; }
+  </style>
+</head>
+<body>
+  <div class="top" role="banner">
+    <span>IL SITO<span class="dot">.</span></span>
+    <span>Rilievo n. 07 · Lombardia</span>
+  </div>
+
+  <main class="wrap">
+    <div class="depth" aria-hidden="true">
+      <span class="ticks"></span>
+      <span class="m">Profondità · depth <b>40.4 m</b></span>
+    </div>
+
+    <h1>404</h1>
+    <p class="sub"><i>Nessun livello a questa profondità.</i> No record at this depth.</p>
+    <p class="note">
+      The survey holds ten strata, from Moscazzano to Cremona, plus the culture and the field
+      notebook. This address is not among them.
+    </p>
+
+    <div class="cta">
+      <a class="btn" href="./">Torna al rilievo · back to the survey</a>
+      <a class="quiet" href="./privacy.html">Privacy · note legali</a>
+    </div>
+  </main>
+
+  <div class="colophon">
+    IL SITO · an independent study page · not affiliated with the film, its makers, or the places named
+  </div>
+</body>
+</html>
